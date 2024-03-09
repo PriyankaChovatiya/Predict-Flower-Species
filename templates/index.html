@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<title>ML API</title>
+</head>
+
+<body>
+<div class="iris_input">
+
+	<h1>Predict Flower Species </h1>
+
+	<form action="{{ url_for('predict')}}" method="post" >
+
+		<input type="text" name="SepalLength" placeholder="SepalLength" required="required" />
+		<input type="text" name="SepalWidth" placeholder="SepalWidth" required="required" />
+		<input type="text" name="PetalLength" placeholder="PetalLength" required="required" />
+		<input type="text" name="PetalWidth" placeholder="PetalWidth" required="required" />
+		<button type="submit"> Predict </button>
+	</form>
+
+</div>
+</body>
+<br>
+<br>
+
+
+<p> <h2> The Flower Species is: {{prediction_text}} </h2> </p>
+
+</html>
